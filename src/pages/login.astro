@@ -1,5 +1,11 @@
 ---
- const title = 'Tailwind CSS';
+const logo = 'https://eddu.dev/favicons/favicon-96x96.png'
+
+
+import { faker } from '@faker-js/faker';
+const randomEmail = faker.internet.email();
+const randomPassword = faker.internet.password();
+
 ---
 <meta charset="UTF-8" />
 
@@ -7,13 +13,13 @@
     
 <div class="mt-32 w-full max-w-sm p-6 m-auto mx-auto bg-white rounded-lg shadow-md">
     <div class="flex justify-center mx-auto">
-        <img class="w-auto h-7 sm:h-12" src="https://eddu.dev/favicons/favicon-96x96.png" alt="">
+        <img class="w-auto h-7 sm:h-12" src={logo} alt="Logo">
     </div>
 
     <form class="mt-6">
         <div>
             <label for="username" class="block text-sm text-gray-800 ">E-mail</label>
-            <input type="text" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-lg   focus:border-blue-400 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" />
+            <input type="text" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-lg   focus:border-blue-400 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" value={randomEmail} />
         </div>
 
         <div class="mt-4">
@@ -22,7 +28,7 @@
                 <a href="#" class="text-xs text-gray-600 hover:underline">Esqueceu a senha?</a>
             </div>
 
-            <input type="password" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-lg focus:border-blue-400 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" />
+            <input type="password" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-lg focus:border-blue-400 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" value={randomPassword}/>
         </div>
 
         <div class="mt-6">
