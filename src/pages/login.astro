@@ -1,50 +1,60 @@
 ---
 const logo = "https://eddu.dev/favicons/favicon-96x96.png";
 
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 
 import artwork from "../images/login_artwork.jpg";
 import Welcome from "../components/Welcome_desktop.astro";
 import Welcome2 from "../components/Welcome_mobile.astro";
 import SignForm from "../components/Sign.jsx";
-import { Image } from '@astrojs/image/components';
-
+import { Image } from "@astrojs/image/components";
 
 const welcome = {
   title: "Bem-vindo a Eddu.co 🦑",
-  description: "Navegue por um portfólio diversificado, repleto de inovação e resultados excepcionais. Satisfaça suas necessidades com nossa abordagem única e orientada para o sucesso.",
+  description:
+    "Navegue por um portfólio diversificado, repleto de inovação e resultados excepcionais. Satisfaça suas necessidades com nossa abordagem única e orientada para o sucesso.",
   href: "/",
   logo: logo,
-  background: artwork
-}
+  background: artwork,
+};
 ---
 
 <Layout title="Login em Eddu.co">
-
   <section class="bg-white">
     <div class="lg:grid lg:min-h-screen lg:grid-cols-12">
       <section
         class="relative flex h-32 items-end bg-gray-900 lg:col-span-5 lg:h-full xl:col-span-6"
       >
-        <Image class="absolute inset-0 h-full w-full object-cover opacity-80" src={welcome.background} alt="Artwork Eddu" width={1200} height={1080}/>
-  
-        <Welcome title={welcome.title} description={welcome.description} href={welcome.href} logo={welcome.logo}/>
-  
+        <Image
+          class="absolute inset-0 h-full w-full object-cover opacity-80"
+          src={welcome.background}
+          alt="Artwork Eddu"
+          width={1200}
+          height={1080}
+        />
+
+        <Welcome
+          title={welcome.title}
+          description={welcome.description}
+          href={welcome.href}
+          logo={welcome.logo}
+        />
       </section>
-  
+
       <main
         aria-label="Main"
-        class="flex items-center justify-center px-8 py-8 sm:px-12 lg:col-span-7 lg:px-16 lg:py-12 xl:col-span-6">
+        class="flex items-center justify-center px-8 py-8 sm:px-12 lg:col-span-7 lg:px-16 lg:py-12 xl:col-span-6"
+      >
         <div class="max-w-xl lg:max-w-3xl">
-  
-          <Welcome2 title={welcome.title} description={welcome.description} href={welcome.href} logo={welcome.logo}/>
-          <SignForm client:visible/>
-  
-          
+          <Welcome2
+            title={welcome.title}
+            description={welcome.description}
+            href={welcome.href}
+            logo={welcome.logo}
+          />
+          <SignForm client:visible />
         </div>
       </main>
     </div>
   </section>
-  
 </Layout>
-  
