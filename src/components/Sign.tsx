@@ -9,68 +9,39 @@ export default function Form() {
   return (
     <form action="#" className="mt-8 grid grid-cols-6 gap-6">
       <div className="col-span-6 sm:col-span-3">
-        <Box
-          component="form"
-          sx={{
-            "& > :not(style)": { m: 1, width: "100%" },
-          }}
-          noValidate
-          autoComplete="off"
-        >
           <TextField
+            name="first-name"
             required
             id="outlined-required"
             label="Primeiro nome"
             variant="outlined"
+            fullWidth
           />
-        </Box>
       </div>
 
       <div className="col-span-6 sm:col-span-3">
-        <Box
-          component="form"
-          sx={{
-            "& > :not(style)": { m: 1, width: "100%" },
-          }}
-          noValidate
-          autoComplete="off"
-        >
           <TextField
+            name="last-name"
             required
             id="outlined-required"
             label="Último nome"
             variant="outlined"
+            fullWidth
           />
-        </Box>
       </div>
 
       <div className="col-span-6">
-        <Box
-          component="form"
-          sx={{
-            "& > :not(style)": { m: 1, width: "100%" },
-          }}
-          noValidate
-          autoComplete="off"
-        >
           <TextField
+            name="email"
             required
             id="outlined-required"
             label="E-mail"
             variant="outlined"
+            fullWidth
           />
-        </Box>
       </div>
 
       <div className="col-span-6 sm:col-span-3">
-        <Box
-          component="form"
-          sx={{
-            "& > :not(style)": { m: 1, width: "100%" },
-          }}
-          noValidate
-          autoComplete="off"
-        >
           <TextField
             required
             id="outlined-password-required"
@@ -78,19 +49,11 @@ export default function Form() {
             label="Senha"
             variant="outlined"
             autoComplete="current-password"
+            fullWidth
           />
-        </Box>
       </div>
 
       <div className="col-span-6 sm:col-span-3">
-        <Box
-          component="form"
-          sx={{
-            "& > :not(style)": { m: 1, width: "100%" },
-          }}
-          noValidate
-          autoComplete="off"
-        >
           <TextField
             required
             id="outlined-repeat-password-required"
@@ -98,24 +61,15 @@ export default function Form() {
             label="Repetir senha"
             variant="outlined"
             autoComplete="current-password"
+            fullWidth
           />
-        </Box>
       </div>
 
       <div className="col-span-6">
-        <Box
-          component="form"
-          sx={{
-            "& > :not(style)": { m: 1, width: "100%" },
-          }}
-          noValidate
-          autoComplete="off"
-        >
           <FormControlLabel
             control={<Switch defaultChecked />}
             label="Quero receber emails sobre eventos e atualizações dos produtos da empresa."
           />
-        </Box>
       </div>
 
       <div className="col-span-6">
